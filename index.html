@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drspecimen Intellisense Group (DIG) · AI research and products</title>
+<meta name="description" content="DIG is an independent research and development practice in Nigeria. We build AI products and help businesses put AI and machine learning to work in finance, education and technology.">
+<meta name="theme-color" content="#0E2A47">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E2A47'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' text-anchor='middle' fill='%23F2B544'%3EDIG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6F8FB; --surface:#FFFFFF; --ink:#0E1B2B; --muted:#56657A; --line:#E1E7EF;
+    --navy:#0E2A47; --gold:#F2B544; --green:#0B6B4E; --on-green:#FFFFFF; --green-soft:#E3F2EC; --shadow:0 10px 30px rgba(14,42,71,.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0B1420; --surface:#121E2D; --ink:#E8EEF6; --muted:#9AA9BC; --line:#22324A;
+      --navy:#E8EEF6; --green:#3CC08E; --on-green:#04241A; --green-soft:#12322A; --shadow:0 10px 30px rgba(0,0,0,.35); }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+  /* Header */
+  header{padding-block:22px}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:-.01em}
+  .mark{width:38px;height:38px;border-radius:10px;background:#0E2A47;color:#F2B544;display:grid;place-items:center;font-size:.8rem;font-weight:800}
+  nav a{text-decoration:none;color:var(--muted);font-weight:600;font-size:.95rem;margin-left:20px}
+  nav a:hover{color:var(--ink)}
+
+  /* Hero */
+  .hero{padding-block:56px 40px}
+  .eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);
+    background:var(--green-soft);padding:6px 12px;border-radius:999px}
+  h1{font-size:clamp(2.1rem,5.4vw,3.6rem);line-height:1.08;letter-spacing:-.03em;margin:18px 0 16px;color:var(--navy);max-width:16ch}
+  .lede{font-size:clamp(1.05rem,2vw,1.2rem);color:var(--muted);max-width:60ch;margin:0 0 28px}
+  .cta{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:12px;font-weight:700;text-decoration:none;font-size:1rem}
+  .btn.primary{background:var(--green);color:var(--on-green)}
+  .btn.ghost{border:1px solid var(--line);background:var(--surface)}
+  .btn:hover{transform:translateY(-1px)}
+
+  /* Sections */
+  section{padding-block:40px}
+  h2{font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.02em;margin:0 0 8px;color:var(--navy)}
+  .sub{color:var(--muted);margin:0 0 26px;max-width:62ch}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+  .card h3{margin:10px 0 6px;font-size:1.1rem}
+  .card p{margin:0;color:var(--muted);font-size:.97rem}
+  .icon{font-size:1.6rem}
+
+  /* Product card */
+  .product{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;background:var(--surface);border:1px solid var(--line);
+    border-radius:24px;padding:30px;box-shadow:var(--shadow)}
+  .product .tag{font-size:.8rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.06em}
+  .product h3{font-size:1.9rem;margin:6px 0 4px;letter-spacing:-.02em}
+  .product .names{color:var(--muted);font-size:.92rem;margin:0 0 12px}
+  .product ul{margin:14px 0 22px;padding-left:20px;color:var(--muted)}
+  .product li{margin:4px 0}
+  .phone{justify-self:center;width:220px;border-radius:30px;background:#0B6B4E;padding:18px;color:#fff;box-shadow:0 18px 40px rgba(11,107,78,.35)}
+  .phone .screen{background:#F3F7F4;color:#10252A;border-radius:18px;padding:16px;font-size:.85rem}
+  .phone .screen b{display:block;font-size:1.05rem;margin-bottom:6px;color:#0B6B4E}
+  .phone .pill{display:inline-block;background:#E3F2EC;color:#0B6B4E;border-radius:999px;padding:3px 10px;font-weight:700;font-size:.75rem;margin:8px 0}
+  .phone .fake-btn{background:#0B6B4E;color:#fff;border-radius:10px;padding:9px;text-align:center;font-weight:700;margin-top:10px}
+
+  .sectors{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+  .sector{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:600}
+
+  /* Contact */
+  .contact{background:#0E2A47;color:#E8EEF6;border-radius:24px;padding:32px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+  .contact h2{color:#fff}
+  .contact p{margin:0;color:#B9C6D8}
+  .contact .btn.primary{background:#F2B544;color:#0E2A47}
+
+  footer{padding-block:30px 40px;color:var(--muted);font-size:.9rem;text-align:center}
+
+  @media (max-width:760px){
+    nav{display:none}
+    .hero{padding-block:34px 24px}
+    .product{grid-template-columns:1fr;padding:22px}
+    .phone{width:200px}
+    .contact{padding:24px}
+  }
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} .btn:hover{transform:none} }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="bar">
+    <a class="logo" href="/" aria-label="DIG home"><span class="mark">DIG</span><span>Drspecimen Intellisense Group</span></a>
+    <nav aria-label="Sections"><a href="#what">What we do</a><a href="#products">Products</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <span class="eyebrow">Research · Innovation · Development</span>
+    <h1>AI that works for Nigerian businesses and people.</h1>
+    <p class="lede">DIG is an independent research and development practice. We build AI products, help companies put AI and
+      machine learning into their tools and operations, and train teams to use them well.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://etomi.drspecimen.online">Try EtoMi →</a>
+      <a class="btn ghost" href="#contact">Work with us</a>
+    </div>
+  </div>
+
+  <section id="what" class="wrap">
+    <h2>What we do</h2>
+    <p class="sub">From the first idea to a working system, and the people who run it.</p>
+    <div class="grid">
+      <div class="card"><div class="icon" aria-hidden="true">🧠</div><h3>AI integration</h3>
+        <p>We add AI and machine learning to your business applications and tools, so they read, decide and respond faster.</p></div>
+      <div class="card"><div class="icon" aria-hidden="true">🤖</div><h3>AI agents and software</h3>
+        <p>We design and build AI agents and custom software that handle real tasks end to end.</p></div>
+      <div class="card"><div class="icon" aria-hidden="true">🔬</div><h3>Research and innovation</h3>
+        <p>We research problems, prototype solutions and turn the ones that work into products.</p></div>
+      <div class="card"><div class="icon" aria-hidden="true">🎓</div><h3>AI training for teams</h3>
+        <p>We teach staff what AI is, where it helps, and how to use it safely in their daily work.</p></div>
+    </div>
+  </section>
+
+  <section id="products" class="wrap">
+    <h2>Our products</h2>
+    <p class="sub">Built and run by DIG.</p>
+    <article class="product">
+      <div>
+        <span class="tag">Fintech · Consumer protection</span>
+        <h3>EtoMi</h3>
+        <p class="names">MyRight · EtoMi · HakkiNa · IkikeM · NaMyRight</p>
+        <p>A multilingual AI consumer-rights assistant that helps Nigerians get their money back after failed transfers,
+          ATM and POS errors and wrong bank charges.</p>
+        <ul>
+          <li>Tell it what happened by typing, speaking or snapping the receipt, in English, Pidgin, Yorùbá, Hausa or Igbo</li>
+          <li>It finds the CBN rule and deadline that apply</li>
+          <li>It writes and sends your complaint, then follows up until it's resolved</li>
+        </ul>
+        <a class="btn primary" href="https://etomi.drspecimen.online">Open EtoMi →</a>
+      </div>
+      <div class="phone" aria-hidden="true">
+        <div class="screen">
+          <b>Your money, your rights.</b>
+          Failed transfer · GTBank · ₦25,000
+          <div class="pill">Waiting on bank · 2 days left</div>
+          <div>The CBN says a failed transfer must be reversed within the set time.</div>
+          <div class="fake-btn">📨 Send to GTBank now</div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="wrap">
+    <h2>Sectors we focus on</h2>
+    <p class="sub">We work with all kinds of organisations, and we build our own products for these three.</p>
+    <div class="sectors"><span class="sector">💳 Finance</span><span class="sector">📚 Education</span><span class="sector">💻 Technology</span></div>
+  </section>
+
+  <section id="contact" class="wrap">
+    <div class="contact">
+      <div>
+        <h2>Let's build something useful.</h2>
+        <p>Projects, partnerships, AI training for your team, or questions about EtoMi.</p>
+      </div>
+      <a class="btn primary" href="mailto:isholanthonysamson@gmail.com?subject=Enquiry%20for%20DIG">✉ isholanthonysamson@gmail.com</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  © <span id="year">2026</span> Drspecimen Intellisense Group (DIG) · Nigeria
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
