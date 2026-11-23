@@ -3,178 +3,145 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Drspecimen Intellisense Group (DIG) · AI research and products</title>
-<meta name="description" content="DIG is an independent research and development practice in Nigeria. We build AI products and help businesses put AI and machine learning to work in finance, education and technology.">
-<meta name="theme-color" content="#0E2A47">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E2A47'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' text-anchor='middle' fill='%23F2B544'%3EDIG%3C/text%3E%3C/svg%3E">
+<title>Drspecimen IntelliSense Group (DIG) · AI research, products and integration</title>
+<meta name="description" content="DIG is an IntelliSense company for Africa. We research, build and integrate AI for finance, education and technology, and created EtoMi, the multilingual AI consumer-rights assistant.">
+<link rel="canonical" href="https://drspecimen.online/">
+<meta name="theme-color" content="#0A1B33">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Drspecimen IntelliSense Group">
+<meta property="og:title" content="Drspecimen IntelliSense Group (DIG) · AI research, products and integration">
+<meta property="og:description" content="DIG is an IntelliSense company for Africa. We research, build and integrate AI for finance, education and technology, and created EtoMi, the multilingual AI consumer-rights assistant.">
+<meta property="og:url" content="https://drspecimen.online/">
+<meta property="og:image" content="https://drspecimen.online/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#F6F8FB; --surface:#FFFFFF; --ink:#0E1B2B; --muted:#56657A; --line:#E1E7EF;
-    --navy:#0E2A47; --gold:#F2B544; --green:#0B6B4E; --on-green:#FFFFFF; --green-soft:#E3F2EC; --shadow:0 10px 30px rgba(14,42,71,.08);
-  }
-  @media (prefers-color-scheme: dark){
-    :root{ --bg:#0B1420; --surface:#121E2D; --ink:#E8EEF6; --muted:#9AA9BC; --line:#22324A;
-      --navy:#E8EEF6; --green:#3CC08E; --on-green:#04241A; --green-soft:#12322A; --shadow:0 10px 30px rgba(0,0,0,.35); }
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
-  a{color:inherit}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-
-  /* Header */
-  header{padding-block:22px}
-  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px}
-  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:-.01em}
-  .mark{width:38px;height:38px;border-radius:10px;background:#0E2A47;color:#F2B544;display:grid;place-items:center;font-size:.8rem;font-weight:800}
-  nav a{text-decoration:none;color:var(--muted);font-weight:600;font-size:.95rem;margin-left:20px}
-  nav a:hover{color:var(--ink)}
-
-  /* Hero */
-  .hero{padding-block:56px 40px}
-  .eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);
-    background:var(--green-soft);padding:6px 12px;border-radius:999px}
-  h1{font-size:clamp(2.1rem,5.4vw,3.6rem);line-height:1.08;letter-spacing:-.03em;margin:18px 0 16px;color:var(--navy);max-width:16ch}
-  .lede{font-size:clamp(1.05rem,2vw,1.2rem);color:var(--muted);max-width:60ch;margin:0 0 28px}
-  .cta{display:flex;flex-wrap:wrap;gap:12px}
-  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:12px;font-weight:700;text-decoration:none;font-size:1rem}
-  .btn.primary{background:var(--green);color:var(--on-green)}
-  .btn.ghost{border:1px solid var(--line);background:var(--surface)}
-  .btn:hover{transform:translateY(-1px)}
-
-  /* Sections */
-  section{padding-block:40px}
-  h2{font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.02em;margin:0 0 8px;color:var(--navy)}
-  .sub{color:var(--muted);margin:0 0 26px;max-width:62ch}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
-  .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
-  .card h3{margin:10px 0 6px;font-size:1.1rem}
-  .card p{margin:0;color:var(--muted);font-size:.97rem}
-  .icon{font-size:1.6rem}
-
-  /* Product card */
-  .product{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;background:var(--surface);border:1px solid var(--line);
-    border-radius:24px;padding:30px;box-shadow:var(--shadow)}
-  .product .tag{font-size:.8rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.06em}
-  .product h3{font-size:1.9rem;margin:6px 0 4px;letter-spacing:-.02em}
-  .product .names{color:var(--muted);font-size:.92rem;margin:0 0 12px}
-  .product ul{margin:14px 0 22px;padding-left:20px;color:var(--muted)}
-  .product li{margin:4px 0}
-  .phone{justify-self:center;width:220px;border-radius:30px;background:#0B6B4E;padding:18px;color:#fff;box-shadow:0 18px 40px rgba(11,107,78,.35)}
-  .phone .screen{background:#F3F7F4;color:#10252A;border-radius:18px;padding:16px;font-size:.85rem}
-  .phone .screen b{display:block;font-size:1.05rem;margin-bottom:6px;color:#0B6B4E}
-  .phone .pill{display:inline-block;background:#E3F2EC;color:#0B6B4E;border-radius:999px;padding:3px 10px;font-weight:700;font-size:.75rem;margin:8px 0}
-  .phone .fake-btn{background:#0B6B4E;color:#fff;border-radius:10px;padding:9px;text-align:center;font-weight:700;margin-top:10px}
-
-  .sectors{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-  .sector{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:600}
-
-  /* Contact */
-  .contact{background:#0E2A47;color:#E8EEF6;border-radius:24px;padding:32px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
-  .contact h2{color:#fff}
-  .contact p{margin:0;color:#B9C6D8}
-  .contact .btn.primary{background:#F2B544;color:#0E2A47}
-
-  footer{padding-block:30px 40px;color:var(--muted);font-size:.9rem;text-align:center}
-
-  @media (max-width:760px){
-    nav{display:none}
-    .hero{padding-block:34px 24px}
-    .product{grid-template-columns:1fr;padding:22px}
-    .phone{width:200px}
-    .contact{padding:24px}
-  }
-  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} .btn:hover{transform:none} }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Drspecimen IntelliSense Group", "alternateName": "DIG", "url": "https://drspecimen.online", "logo": "https://drspecimen.online/assets/img/apple-touch-icon.png", "email": "research@drspecimen.online", "telephone": "+234 810 669 2300", "sameAs": ["https://www.linkedin.com/company/drspecimen", "https://github.com/drspecimen"], "address": {"@type": "PostalAddress", "addressCountry": "NG"}}</script>
 </head>
 <body>
-
-<header class="wrap">
-  <div class="bar">
-    <a class="logo" href="/" aria-label="DIG home"><span class="mark">DIG</span><span>Drspecimen Intellisense Group</span></a>
-    <nav aria-label="Sections"><a href="#what">What we do</a><a href="#products">Products</a><a href="#contact">Contact</a></nav>
-  </div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip"><div class="wrap"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /> <path d="M20 3v4" /> <path d="M22 5h-4" /> <path d="M4 17v2" /> <path d="M5 18H3" /> </svg><span>Meet us at the 2nd TETFund National Research Fair &amp; Exhibition · Abuja · 23–27 Nov 2026 · <a href="insights.html#nrfe-2026">Details</a></span></div></div>
+<header class="site-header">
+ <div class="wrap">
+  <a class="brand" href="index.html" aria-label="Drspecimen IntelliSense Group home"><img src="assets/img/dig-logo.svg" alt="" width="38" height="40"><span><b>Drspecimen IntelliSense</b><small>Group · DIG</small></span></a>
+  <button class="burger" aria-label="Open menu" aria-expanded="false"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <line x1="4" x2="20" y1="12" y2="12" /> <line x1="4" x2="20" y1="6" y2="6" /> <line x1="4" x2="20" y1="18" y2="18" /> </svg></button>
+  <ul class="nav">
+   <li class="has-menu"><button aria-expanded="false" aria-haspopup="true">Products <svg class="icon chev" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg></button><div class="menu" role="menu"><a href="etomi.html"><span class="mi"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <line x1="3" x2="21" y1="22" y2="22" /> <line x1="6" x2="6" y1="18" y2="11" /> <line x1="10" x2="10" y1="18" y2="11" /> <line x1="14" x2="14" y1="18" y2="11" /> <line x1="18" x2="18" y1="18" y2="11" /> <polygon points="12 2 20 7 4 7" /> </svg></span><span><b>EtoMi<span class="tag live">Live</span></b><span class="d">Consumer-rights AI for bank and payment complaints</span></span></a><div class="soon-item" aria-disabled="true"><span class="mi"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M14 22v-4a2 2 0 1 0-4 0v4" /> <path d="m18 10 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.382a1 1 0 0 1 .553-.894L6 10" /> <path d="M18 5v17" /> <path d="m4 6 7.106-3.553a2 2 0 0 1 1.788 0L20 6" /> <path d="M6 5v17" /> <circle cx="12" cy="9" r="2" /> </svg></span><span><b>ResultSense<span class="tag soon">Coming soon</span></b><span class="d">AI for school results</span></span></div><div class="soon-item" aria-disabled="true"><span class="mi"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 3v16a2 2 0 0 0 2 2h16" /> <path d="m19 9-5 5-4-4-3 3" /> </svg></span><span><b>AI Learning Analytics<span class="tag soon">Coming soon</span></b><span class="d">Student performance prediction</span></span></div><div class="soon-item" aria-disabled="true"><span class="mi"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="20" height="8" x="2" y="2" rx="2" ry="2" /> <rect width="20" height="8" x="2" y="14" rx="2" ry="2" /> <line x1="6" x2="6.01" y1="6" y2="6" /> <line x1="6" x2="6.01" y1="18" y2="18" /> </svg></span><span><b>InfraDash<span class="tag soon">Coming soon</span></b><span class="d">Infrastructure intelligence</span></span></div></div></li>
+   <li><a href="services.html">Services</a></li>
+   <li><a href="industries.html">Industries</a></li>
+   <li class="has-menu"><button aria-expanded="false" aria-haspopup="true">Company <svg class="icon chev" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg></button><div class="menu" role="menu">
+     <a href="about.html"><span class="mi"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /> </svg></span><span><b>About DIG</b><span class="d">Who we are, mission and vision</span></span></a>
+     <a href="responsible-ai.html"><span class="mi"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /> </svg></span><span><b>Responsible AI</b><span class="d">How we build AI people can trust</span></span></a>
+     <a href="insights.html"><span class="mi"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 7v14" /> <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /> </svg></span><span><b>Insights &amp; news</b><span class="d">Updates, research and events</span></span></a>
+   </div></li>
+   <li><a href="contact.html">Contact</a></li>
+   <li class="mob-only"><a class="btn btn-primary" href="contact.html?topic=demo">Book a demo</a></li>
+  </ul>
+  <div class="head-cta"><a class="btn btn-ghost" href="https://etomi.drspecimen.online">Try EtoMi</a><a class="btn btn-primary" href="contact.html?topic=demo">Book a demo</a></div>
+ </div>
 </header>
+<main id="main">
+<section class="hero" style="padding:0"><div class="wrap">
+ <div><div class="eyebrow">An IntelliSense company for Africa</div>
+  <h1>We give everyday systems <em>a sense of their own.</em></h1>
+  <p class="lede">Drspecimen IntelliSense Group (DIG) researches, builds and integrates AI that helps banks, schools and businesses read, predict, decide and respond, using the systems they already have.</p>
+  <div class="ctas"><a class="btn btn-primary" href="services.html">Explore what we do <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></a><a class="btn btn-ghost" href="https://etomi.drspecimen.online">Try EtoMi, free</a></div>
+  <div class="trust"><span><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Finance · Education · Technology</span><span><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Five Nigerian languages</span><span><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Privacy by design</span></div>
+ </div><div class="loop rv" aria-hidden="true"><svg viewBox="0 0 400 400">
+<defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#1E90FF"/><stop offset="1" stop-color="#FFA500"/></linearGradient></defs>
+<circle cx="200" cy="200" r="138" fill="none" stroke="url(#lg)" stroke-width="3" stroke-dasharray="6 10"><animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="40s" repeatCount="indefinite"/></circle>
+<circle cx="200" cy="200" r="78" fill="#102745" stroke="#1E90FF" stroke-opacity=".4"/>
+<image href="assets/img/dig-logo.svg" x="164" y="160" width="72" height="78"/>
+<g font-family="Montserrat" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">
+<g transform="translate(200 62)"><circle r="34" fill="#1E90FF"/><text y="5">Sense</text></g>
+<g transform="translate(338 200)"><circle r="40" fill="#0B6B4E"/><text y="5" font-size="13">Understand</text></g>
+<g transform="translate(200 338)"><circle r="34" fill="#FFA500"/><text y="5" fill="#0A1B33">Act</text></g>
+<g transform="translate(62 200)"><circle r="34" fill="#16345C" stroke="#7CC0FF"/><text y="5">Learn</text></g></g></svg></div>
+</div></section>
+<nav class="anchors" aria-label="On this page"><div class="wrap">
+ <a href="#latest">Latest</a><a href="#industries">Industries</a><a href="#products">Products</a><a href="#services">Services</a><a href="#facts">Fast facts</a><a href="#recognition">Recognition</a><a href="#responsible">Responsible AI</a><a href="#news">News &amp; updates</a></div></nav>
 
-<main>
-  <div class="wrap hero">
-    <span class="eyebrow">Research · Innovation · Development</span>
-    <h1>AI that works for Nigerian businesses and people.</h1>
-    <p class="lede">DIG is an independent research and development practice. We build AI products, help companies put AI and
-      machine learning into their tools and operations, and train teams to use them well.</p>
-    <div class="cta">
-      <a class="btn primary" href="https://etomi.drspecimen.online">Try EtoMi →</a>
-      <a class="btn ghost" href="#contact">Work with us</a>
+<section id="latest"><div class="wrap"><div class="sec-head"><div><div class="eyebrow dark">Latest announcements</div><h2>What's new at DIG</h2></div><a class="link" href="insights.html">All news <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></a></div>
+<div class="grid g3">
+<a class="ann a1 rv" href="insights.html#nrfe-2026"><div class="k">Event · 23–27 Nov 2026</div><h3>EtoMi at the 2nd TETFund National Research Fair &amp; Exhibition</h3><p>Selected to exhibit at the Abuja Trade and Convention Centre. Come and try it at our stand.</p><span class="link">Read more <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span></a>
+<a class="ann a2 rv" href="etomi.html"><div class="k">Product</div><h3>EtoMi now sends your complaint and follows up for you</h3><p>No email app needed: it writes, sends, saves the case and reminds you until you're paid back.</p><span class="link">See how it works <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span></a>
+<a class="ann a3 rv" href="responsible-ai.html"><div class="k">Our approach</div><h3>Native intelligence first, responsible AI always</h3><p>AI should sharpen human thinking, not replace it. Here's how we build AI people can trust.</p><span class="link">Our principles <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span></a></div></div></section>
+
+<section id="industries" class="soft"><div class="wrap"><div class="sec-head"><div><div class="eyebrow dark">Industries</div><h2>AI built for the way your sector works</h2>
+<p>We work with all kinds of organisations, and design our own products for finance, education and technology.</p></div><a class="link" href="industries.html">Explore industries <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></a></div>
+<div class="grid g3"><a class="ind rv" href="industries.html#banking" style="text-decoration:none"><div class="ic"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <line x1="3" x2="21" y1="22" y2="22" /> <line x1="6" x2="6" y1="18" y2="11" /> <line x1="10" x2="10" y1="18" y2="11" /> <line x1="14" x2="14" y1="18" y2="11" /> <line x1="18" x2="18" y1="18" y2="11" /> <polygon points="12 2 20 7 4 7" /> </svg></div><h3>Banking</h3><div class="one">Complaints, risk and customer service</div><p>Complaint intake and triage, CBN deadline tracking, fraud and anomaly detection, and multilingual customer assistants.</p></a><a class="ind rv" href="industries.html#fintech-payments" style="text-decoration:none"><div class="ic"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="20" height="14" x="2" y="5" rx="2" /> <line x1="2" x2="22" y1="10" y2="10" /> </svg></div><h3>Fintech & payments</h3><div class="one">Disputes, reconciliation and onboarding</div><p>Failed-transaction disputes, document and receipt reading, risk scoring and agent automation for operations teams.</p></a><a class="ind rv" href="industries.html#education" style="text-decoration:none"><div class="ic"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M14 22v-4a2 2 0 1 0-4 0v4" /> <path d="m18 10 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.382a1 1 0 0 1 .553-.894L6 10" /> <path d="M18 5v17" /> <path d="m4 6 7.106-3.553a2 2 0 0 1 1.788 0L20 6" /> <path d="M6 5v17" /> <circle cx="12" cy="9" r="2" /> </svg></div><h3>Education</h3><div class="one">Results, analytics and learning</div><p>Result analysis with early warnings, learning analytics, parent communication in local languages, and AI curricula.</p></a><a class="ind rv" href="industries.html#technology-infrastructure" style="text-decoration:none"><div class="ic"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="16" height="16" x="4" y="4" rx="2" /> <rect width="6" height="6" x="9" y="9" rx="1" /> <path d="M15 2v2" /> <path d="M15 20v2" /> <path d="M2 15h2" /> <path d="M2 9h2" /> <path d="M20 15h2" /> <path d="M20 9h2" /> <path d="M9 2v2" /> <path d="M9 20v2" /> </svg></div><h3>Technology & infrastructure</h3><div class="one">Uptime, monitoring and operations</div><p>Data-centre and network monitoring, incident early warning, and AI added to existing software products.</p></a><a class="ind rv" href="industries.html#smes-retail" style="text-decoration:none"><div class="ic"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /> <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /> <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /> <path d="M2 7h20" /> <path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /> </svg></div><h3>SMEs & retail</h3><div class="one">Payments, customers and growth</div><p>Merchant dispute handling, sales forecasting, and simple AI assistants for customers in their own language.</p></a><a class="ind rv" href="industries.html#public-sector-ngos" style="text-decoration:none"><div class="ic"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" /> <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" /> <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" /> <path d="M10 6h4" /> <path d="M10 10h4" /> <path d="M10 14h4" /> <path d="M10 18h4" /> </svg></div><h3>Public sector & NGOs</h3><div class="one">Consumer protection and inclusion</div><p>Citizen-facing assistants, complaint analytics and programmes that reach people in local languages.</p></a></div></div></section>
+
+<section id="products"><div class="wrap"><div class="sec-head"><div><div class="eyebrow dark">Products</div><h2>From our research lab to the market</h2>
+<p>Each product starts as a real problem we studied, then becomes a working system. EtoMi is live; the others open as they are ready.</p></div></div>
+<div class="grid g4"><article class="prod rv"><div class="art" style="background:linear-gradient(135deg,#0B6B4E,#0A3B33)"><img src="assets/img/etomi-home.webp" alt="EtoMi home screen" loading="lazy"></div><div class="body"><span class="tag live st">Live prototype</span><h3>EtoMi</h3><div class="sub">Consumer-rights AI for bank and payment complaints</div><p>Helps Nigerians get their money back after failed transfers, double debits, ATM and POS errors, in five languages.</p><div class="foot"><a class="link" href="etomi.html">Learn more <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></a></div></div></article><article class="prod is-soon rv"><div class="art" style="background:linear-gradient(135deg,#1E5AA8,#0A1B33)"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M14 22v-4a2 2 0 1 0-4 0v4" /> <path d="m18 10 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.382a1 1 0 0 1 .553-.894L6 10" /> <path d="M18 5v17" /> <path d="m4 6 7.106-3.553a2 2 0 0 1 1.788 0L20 6" /> <path d="M6 5v17" /> <circle cx="12" cy="9" r="2" /> </svg></div><div class="body"><span class="tag soon st">In development</span><h3>ResultSense</h3><div class="sub">AI for school results</div><p>Adds early warnings for at-risk students to existing result software, with parent reports in local languages.</p><div class="foot"><span class="closed"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" /> </svg>Coming soon</span></div></div></article><article class="prod is-soon rv"><div class="art" style="background:linear-gradient(135deg,#5B3FA8,#0A1B33)"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 3v16a2 2 0 0 0 2 2h16" /> <path d="m19 9-5 5-4-4-3 3" /> </svg></div><div class="body"><span class="tag soon st">In development</span><h3>AI Learning Analytics</h3><div class="sub">Student performance prediction</div><p>Predicts student performance from learning data and shows lecturers who needs help, early enough to act.</p><div class="foot"><span class="closed"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" /> </svg>Coming soon</span></div></div></article><article class="prod is-soon rv"><div class="art" style="background:linear-gradient(135deg,#7A4A00,#0A1B33)"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="20" height="8" x="2" y="2" rx="2" ry="2" /> <rect width="20" height="8" x="2" y="14" rx="2" ry="2" /> <line x1="6" x2="6.01" y1="6" y2="6" /> <line x1="6" x2="6.01" y1="18" y2="18" /> </svg></div><div class="body"><span class="tag soon st">In development</span><h3>InfraDash</h3><div class="sub">Infrastructure intelligence</div><p>A live dashboard that watches servers, networks and data centres, and flags problems before they become outages.</p><div class="foot"><span class="closed"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" /> </svg>Coming soon</span></div></div></article></div></div></section>
+
+<section id="services" class="soft"><div class="wrap"><div class="sec-head"><div><div class="eyebrow dark">Services</div><h2>From idea to intelligent system</h2>
+<p>Discover, prototype, integrate, train and support: we stay with you from the first workshop to a system your people use every day.</p></div><a class="link" href="services.html">All services <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></a></div>
+<div class="grid g4"><div class="card rv"><div class="ic"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" /> <path d="M9 13a4.5 4.5 0 0 0 3-4" /> <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" /> <path d="M3.477 10.896a4 4 0 0 1 .585-.396" /> <path d="M6 18a4 4 0 0 1-1.967-.516" /> <path d="M12 13h4" /> <path d="M12 18h6a2 2 0 0 1 2 2v1" /> <path d="M12 8h8" /> <path d="M16 8V5a2 2 0 0 1 2-2" /> <circle cx="16" cy="13" r=".5" /> <circle cx="18" cy="3" r=".5" /> <circle cx="20" cy="21" r=".5" /> <circle cx="20" cy="8" r=".5" /> </svg></div><h3>AI integration</h3><p>An IntelliSense layer for the systems you already run: banking front-ends, school portals, CRMs and ERPs.</p><a class="link" href="services.html#ai-integration">Learn more <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></a></div><div class="card rv"><div class="ic"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 3v16a2 2 0 0 0 2 2h16" /> <path d="m19 9-5 5-4-4-3 3" /> </svg></div><h3>Machine learning & predictive analytics</h3><p>Forecasting, risk scoring, fraud and anomaly detection, and student-performance prediction.</p><a class="link" href="services.html#machine-learning-predictive-analytics">Learn more <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></a></div><div class="card rv"><div class="ic"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m5 8 6 6" /> <path d="m4 14 6-6 2-3" /> <path d="M2 5h12" /> <path d="M7 2h1" /> <path d="m22 22-5-10-5 10" /> <path d="M14 18h6" /> </svg></div><h3>Language & voice AI</h3><p>Assistants that understand and speak English, Pidgin, Yorùbá, Hausa and Igbo.</p><a class="link" href="services.html#language-voice-ai">Learn more <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></a></div><div class="card rv"><div class="ic"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 7V5a2 2 0 0 1 2-2h2" /> <path d="M17 3h2a2 2 0 0 1 2 2v2" /> <path d="M21 17v2a2 2 0 0 1-2 2h-2" /> <path d="M7 21H5a2 2 0 0 1-2-2v-2" /> <path d="M7 8h8" /> <path d="M7 12h10" /> <path d="M7 16h6" /> </svg></div><h3>Computer vision & document AI</h3><p>Reading receipts, forms and scanned records automatically and accurately.</p><a class="link" href="services.html#computer-vision-document-ai">Learn more <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></a></div></div></div></section>
+
+<section id="facts" class="dark"><div class="wrap"><div class="sec-head"><div><div class="eyebrow">Fast facts</div><h2>Small team, serious engineering</h2></div></div>
+<div class="facts">
+ <div class="fact rv"><b>5</b><span>Nigerian languages supported in EtoMi: English, Pidgin, Yorùbá, Hausa, Igbo</span></div>
+ <div class="fact rv"><b>250+</b><span>automated tests run on every EtoMi release</span></div>
+ <div class="fact rv"><b>32</b><span>bank complaint desks and the CBN mapped for direct sending</span></div>
+ <div class="fact rv"><b>4</b><span>products in our lab across finance, education and technology</span></div>
+</div></div></section>
+
+<section id="recognition"><div class="wrap"><div class="rec">
+ <div class="rv"><div class="eyebrow dark">Recognition</div>
+  <p class="quote">“From Research to Market”: EtoMi was selected for the 2nd TETFund National Research Fair &amp; Exhibition, 2026.</p>
+  <p style="color:var(--muted)">Under the Financial, Fintech and Allied Services Technologies theme, at the Abuja Trade and Convention Centre, 23–27 November 2026.</p>
+  <a class="link" href="insights.html#nrfe-2026">About the exhibition <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></a></div>
+ <div class="badge-card rv"><div class="eyebrow">Selected exhibitor</div><h3>TETFund NRFE 2026</h3><p>Submission SUB-26-RT-000758 · Featured innovation: EtoMi, the multilingual AI consumer-rights assistant.</p></div>
+</div></div></section>
+
+<section id="responsible" class="soft"><div class="wrap"><div class="banner rv">
+ <div class="txt"><div class="eyebrow">Responsible AI</div><h2>Sharpen human minds. Never replace them.</h2>
+  <p>We believe in every person's natural ability to reason, question and learn. Our AI supports that, and people stay in control of every important action.</p>
+  <ul><li><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>A person confirms every important action</li><li><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>We never ask for PINs, passwords, OTPs or BVNs</li><li><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Built for local languages and everyday phones</li></ul>
+  <a class="btn btn-primary" href="responsible-ai.html">Our principles <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></a></div>
+ <div class="pic"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /> </svg></div>
+</div></div></section>
+
+<section id="news"><div class="wrap"><div class="sec-head"><div><div class="eyebrow dark">News &amp; updates</div><h2>Insights from the lab</h2></div><a class="link" href="insights.html">All insights <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></a></div>
+<div class="grid g3"><a class="news rv" href="insights.html#nrfe-2026"><div class="thumb" style="background:linear-gradient(135deg,#0B6B4E,#0A3B33)"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /> <path d="M20 3v4" /> <path d="M22 5h-4" /> <path d="M4 17v2" /> <path d="M5 18H3" /> </svg></div><div class="b"><div class="meta"><i>Event</i>10 Nov 2026</div><h3>EtoMi selected for the 2nd TETFund National Research Fair & Exhibition</h3><p>DIG will exhibit EtoMi in Abuja, 23–27 November 2026, under the Financial, Fintech and Allied Services Technologies theme.</p><span class="link">Read article <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span></div></a><a class="news rv" href="insights.html#etomi-sends"><div class="thumb" style="background:linear-gradient(135deg,#1E5AA8,#0A1B33)"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="20" height="16" x="2" y="4" rx="2" /> <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /> </svg></div><div class="b"><div class="meta"><i>Product</i>Nov 2026</div><h3>EtoMi now sends complaints and follows up by itself</h3><p>No email app needed. EtoMi writes the complaint, sends it to the bank's complaints desk with you in copy, and reminds you until you're paid back.</p><span class="link">Read article <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span></div></a><a class="news rv" href="insights.html#why-complaints-stall"><div class="thumb" style="background:linear-gradient(135deg,#7A4A00,#0A1B33)"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 3v16a2 2 0 0 0 2 2h16" /> <path d="m19 9-5 5-4-4-3 3" /> </svg></div><div class="b"><div class="meta"><i>Research</i>Nov 2026</div><h3>Why bank complaints stall, and what we're doing about it</h3><p>Billions are refunded every year, but only to people who file correctly and on time. Most people never get that far.</p><span class="link">Read article <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span></div></a></div></div></section>
+<section><div class="wrap"><div class="cta-band rv"><div><div class="eyebrow">Work with DIG</div><h2>Let's build something intelligent together.</h2><p>Banks, fintechs, schools, businesses, government and investors: pilot our products, bring AI into your organisation, train your team, or invest in what we're building.</p></div>
+<div class="ctas"><a class="btn btn-primary" href="contact.html?topic=demo">Book a demo <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></a><a class="btn btn-ghost" href="contact.html">Contact us</a></div></div></div></section></main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="f-top">
+   <div class="f-brand">
+    <a class="brand" href="index.html"><img src="assets/img/dig-logo.svg" alt="" width="38" height="40"><span><b style="color:#fff">Drspecimen IntelliSense</b><small>Group · DIG</small></span></a>
+    <p>We give everyday systems a sense of their own. Research, innovation and development in AI for Africa.</p>
+    <div class="social">
+     <a href="https://www.linkedin.com/company/drspecimen" aria-label="DIG on LinkedIn" rel="noopener"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /> <rect width="4" height="12" x="2" y="9" /> <circle cx="4" cy="4" r="2" /> </svg></a>
+     <a href="https://github.com/drspecimen" aria-label="DIG on GitHub" rel="noopener"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /> <path d="M9 18c-4.51 2-5-2-7-2" /> </svg></a>
+     <a href="mailto:research@drspecimen.online" aria-label="Email DIG"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="20" height="16" x="2" y="4" rx="2" /> <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /> </svg></a>
+     <a href="https://wa.me/2348106692300" aria-label="WhatsApp DIG" rel="noopener"><svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /> </svg></a>
     </div>
+   </div>
+   <div class="f-col"><h4>Products</h4><ul><li><a href="etomi.html">EtoMi</a></li><li class="muted">ResultSense <span class="tag soon">Soon</span></li><li class="muted">AI Learning Analytics <span class="tag soon">Soon</span></li><li class="muted">InfraDash <span class="tag soon">Soon</span></li></ul></div>
+   <div class="f-col"><h4>Services</h4><ul>
+    <li><a href="services.html#ai-integration">AI integration</a></li><li><a href="services.html#machine-learning-predictive-analytics">Machine learning</a></li>
+    <li><a href="services.html#language-voice-ai">Language &amp; voice AI</a></li><li><a href="services.html#ai-agents-automation">AI agents</a></li>
+    <li><a href="services.html#ai-training-capacity-building">AI training</a></li></ul></div>
+   <div class="f-col"><h4>Industries</h4><ul>
+    <li><a href="industries.html#banking">Banking</a></li><li><a href="industries.html#fintech-payments">Fintech &amp; payments</a></li>
+    <li><a href="industries.html#education">Education</a></li><li><a href="industries.html#technology-infrastructure">Technology</a></li>
+    <li><a href="industries.html#public-sector-ngos">Public sector</a></li></ul></div>
+   <div class="f-col"><h4>Company</h4><ul>
+    <li><a href="about.html">About DIG</a></li><li><a href="responsible-ai.html">Responsible AI</a></li>
+    <li><a href="insights.html">Insights &amp; news</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li></ul></div>
   </div>
-
-  <section id="what" class="wrap">
-    <h2>What we do</h2>
-    <p class="sub">From the first idea to a working system, and the people who run it.</p>
-    <div class="grid">
-      <div class="card"><div class="icon" aria-hidden="true">🧠</div><h3>AI integration</h3>
-        <p>We add AI and machine learning to your business applications and tools, so they read, decide and respond faster.</p></div>
-      <div class="card"><div class="icon" aria-hidden="true">🤖</div><h3>AI agents and software</h3>
-        <p>We design and build AI agents and custom software that handle real tasks end to end.</p></div>
-      <div class="card"><div class="icon" aria-hidden="true">🔬</div><h3>Research and innovation</h3>
-        <p>We research problems, prototype solutions and turn the ones that work into products.</p></div>
-      <div class="card"><div class="icon" aria-hidden="true">🎓</div><h3>AI training for teams</h3>
-        <p>We teach staff what AI is, where it helps, and how to use it safely in their daily work.</p></div>
-    </div>
-  </section>
-
-  <section id="products" class="wrap">
-    <h2>Our products</h2>
-    <p class="sub">Built and run by DIG.</p>
-    <article class="product">
-      <div>
-        <span class="tag">Fintech · Consumer protection</span>
-        <h3>EtoMi</h3>
-        <p class="names">MyRight · EtoMi · HakkiNa · IkikeM · NaMyRight</p>
-        <p>A multilingual AI consumer-rights assistant that helps Nigerians get their money back after failed transfers,
-          ATM and POS errors and wrong bank charges.</p>
-        <ul>
-          <li>Tell it what happened by typing, speaking or snapping the receipt, in English, Pidgin, Yorùbá, Hausa or Igbo</li>
-          <li>It finds the CBN rule and deadline that apply</li>
-          <li>It writes and sends your complaint, then follows up until it's resolved</li>
-        </ul>
-        <a class="btn primary" href="https://etomi.drspecimen.online">Open EtoMi →</a>
-      </div>
-      <div class="phone" aria-hidden="true">
-        <div class="screen">
-          <b>Your money, your rights.</b>
-          Failed transfer · GTBank · ₦25,000
-          <div class="pill">Waiting on bank · 2 days left</div>
-          <div>The CBN says a failed transfer must be reversed within the set time.</div>
-          <div class="fake-btn">📨 Send to GTBank now</div>
-        </div>
-      </div>
-    </article>
-  </section>
-
-  <section class="wrap">
-    <h2>Sectors we focus on</h2>
-    <p class="sub">We work with all kinds of organisations, and we build our own products for these three.</p>
-    <div class="sectors"><span class="sector">💳 Finance</span><span class="sector">📚 Education</span><span class="sector">💻 Technology</span></div>
-  </section>
-
-  <section id="contact" class="wrap">
-    <div class="contact">
-      <div>
-        <h2>Let's build something useful.</h2>
-        <p>Projects, partnerships, AI training for your team, or questions about EtoMi.</p>
-      </div>
-      <a class="btn primary" href="mailto:isholanthonysamson@gmail.com?subject=Enquiry%20for%20DIG">✉ isholanthonysamson@gmail.com</a>
-    </div>
-  </section>
-</main>
-
-<footer class="wrap">
-  © <span id="year">2026</span> Drspecimen Intellisense Group (DIG) · Nigeria
+  <div class="f-bot"><span>© <span data-year>2026</span> Drspecimen IntelliSense Group (DIG) · Nigeria</span>
+   <span><a href="mailto:research@drspecimen.online">research@drspecimen.online</a> · <a href="https://wa.me/2348106692300">+234 810 669 2300</a> · <a href="#main">Back to top ↑</a></span></div>
+ </div>
 </footer>
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-</body>
-</html>
+<script src="assets/js/site.js" defer></script>
+</body></html>
