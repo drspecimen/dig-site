@@ -53,3 +53,28 @@
     });
   }
 })();
+
+// Anonymous visit count, shown on EtoMi's private stats page. No cookies and no personal data:
+// only a random code this browser makes for itself, and where the visit came from (e.g. ?from=bulletin).
+(function () {
+  try {
+    let id = localStorage.getItem("dig:device");
+    if (!/^[a-f0-9]{32}$/.test(id || "")) {
+      const b = new Uint8Array(16); crypto.getRandomValues(b);
+      id = Array.from(b, x => x.toString(16).padStart(2, "0")).join("");
+      localStorage.setItem("dig:device", id);
+    }
+    const from = (new URLSearchParams(location.search).get("from") || "").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 20);
+    let src = from || "direct";
+    if (!from && document.referrer) {
+      const h = new URL(document.referrer).hostname;
+      if (h === location.hostname || /(^|\.)drspecimen\.online$/.test(h)) src = "direct";
+      else if (/google\.|bing\.|yahoo\.|duckduckgo\./.test(h)) src = "search";
+      else if (/whatsapp|wa\.me/.test(h)) src = "whatsapp";
+      else if (/facebook|instagram|t\.co$|twitter|x\.com|linkedin|lnkd|tiktok/.test(h)) src = "social";
+      else src = "other";
+    }
+    const body = new Blob([JSON.stringify({ event: "dig_visit", device: id, src })], { type: "text/plain" });
+    navigator.sendBeacon && navigator.sendBeacon("https://etomi.drspecimen.online/api/track", body);
+  } catch (e) {}
+})();
