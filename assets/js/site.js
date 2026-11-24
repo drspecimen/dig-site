@@ -94,3 +94,22 @@
     if (a) send("etomi_click");
   });
 })();
+
+// Live EtoMi impact (shown only once EtoMi has enough real cases to share rounded totals)
+(function () {
+  var boxes = document.querySelectorAll("[data-impact-box]");
+  if (!boxes.length || !window.fetch) return;
+  fetch("https://etomi.drspecimen.online/api/impact").then(function (r) { return r.json(); }).then(function (j) {
+    if (!j || !j.enough) return;
+    var naira = function (v) {
+      if (v >= 1e9) return "₦" + (v / 1e9).toFixed(1).replace(/\.0$/, "") + "bn";
+      if (v >= 1e6) return "₦" + (v / 1e6).toFixed(1).replace(/\.0$/, "") + "m";
+      return "₦" + Math.round(v).toLocaleString("en-NG");
+    };
+    var show = { amount_recovered: naira(j.amount_recovered), amount_logged: naira(j.amount_logged),
+                 cases_resolved: Number(j.cases_resolved).toLocaleString("en-NG"),
+                 median_days: j.median_days != null ? String(j.median_days) : "–" };
+    document.querySelectorAll("[data-impact]").forEach(function (el) { el.textContent = show[el.getAttribute("data-impact")] || "–"; });
+    boxes.forEach(function (b) { b.hidden = false; });
+  }).catch(function () {});
+})();
