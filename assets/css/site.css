@@ -315,3 +315,104 @@ textarea{min-height:140px;resize:vertical}
 }
 
 .impact{margin-top:44px;padding-top:34px;border-top:1px solid rgba(255,255,255,.12)}
+
+/* ---------- Support / sponsor ---------- */
+.nav a.nav-support{white-space:nowrap;color:var(--navy);background:var(--orange);font-weight:800;margin-left:6px}
+.nav a.nav-support:hover,.nav a.nav-support[aria-current="page"]{background:#FFB733;color:var(--navy)}
+.nav a.nav-support .icon{width:16px;height:16px;fill:currentColor}
+.f-support{display:flex;align-items:center;gap:14px;margin:0 0 40px;padding:18px 22px;border-radius:16px;background:var(--orange);color:var(--navy);text-decoration:none;font-size:1rem;line-height:1.45}
+.f-support .icon{width:28px;height:28px;flex:none}
+.f-support span{flex:1}
+.f-support:hover{filter:brightness(1.05)}
+.support-sec{padding-bottom:0}
+.support-band{display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:center;padding:36px 40px;border-radius:26px;background:#FFF4E2;border:2px solid var(--orange)}
+.support-band .sb-ic{width:64px;height:64px;border-radius:18px;background:var(--orange);color:var(--navy);display:grid;place-items:center}
+.support-band .sb-ic .icon{width:34px;height:34px}
+.support-band h2{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:900;margin:8px 0;color:var(--navy)}
+.support-band p{margin:0;color:#3B4A5E;max-width:62ch}
+.support-band .ctas{display:flex;flex-direction:column;gap:10px}
+.quick{display:flex;flex-wrap:wrap;gap:12px}
+.quick .icon{width:18px;height:18px}
+.split2{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.split2 h2{font-size:clamp(1.4rem,2.4vw,1.9rem);margin:10px 0 0}
+.ticks.light li{color:#D8E3F2}
+.ticks.light li .icon{color:var(--orange)}
+.promise{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-left:5px solid var(--green);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.promise h3{margin:0 0 6px}.promise p{margin:0}
+.supporter-slot{display:flex;align-items:center;justify-content:center;gap:10px;min-height:120px;max-width:320px;border:2px dashed var(--line);border-radius:var(--radius);color:var(--muted);text-decoration:none;font-weight:700}
+.supporter-slot:hover{border-color:var(--orange);color:var(--navy)}
+@media (max-width:1180px){.nav a.nav-support{margin-left:0}}
+@media (max-width:900px){
+  .support-band{grid-template-columns:1fr;padding:28px 22px;gap:16px}
+  .support-band .ctas{flex-direction:row;flex-wrap:wrap}
+  .split2{grid-template-columns:1fr;gap:32px}
+  .f-support{align-items:flex-start}
+}
+.mob-support{display:none}
+@media (max-width:960px){
+  .mob-support{display:inline-flex;align-items:center;gap:6px;margin-left:auto;padding:8px 14px;border-radius:999px;background:var(--orange);color:var(--navy);font:800 .9rem Inter;text-decoration:none;white-space:nowrap}
+  .mob-support .icon{width:16px;height:16px;fill:currentColor}
+  .mob-support + .burger{margin-left:6px}
+}
+@media (max-width:520px){.site-header .brand > span{font-size:.85em}.site-header .brand > span small{display:none}}
+@media (max-width:430px){.site-header .brand > span{display:none}}
+
+/* Giving section: drawn by admin.drspecimen.online/give.js */
+.give{padding-bottom:20px}
+[data-dig-give]{--dg-blue:#1E90FF}
+.mob-support{display:none}
+@media (max-width:960px){
+  .mob-support{display:inline-flex;align-items:center;gap:6px;margin-left:auto;padding:8px 14px;border-radius:999px;background:var(--orange);color:var(--navy);font:800 .9rem Inter;text-decoration:none;white-space:nowrap}
+  .mob-support .icon{width:16px;height:16px;fill:currentColor}
+  .mob-support + .burger{margin-left:6px}
+}
+@media (max-width:520px){.site-header .brand > span{font-size:.85em}.site-header .brand > span small{display:none}}
+@media (max-width:430px){.site-header .brand > span{display:none}}
+
+/* ---------- Giving: pilot goal, tiers ---------- */
+.give{padding-bottom:20px}
+.goal{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+.goal-main{padding:40px;background:linear-gradient(140deg,#FFF4E2 0%,#FFE7BF 100%)}
+.goal-amt{font:900 clamp(2.3rem,5vw,3.6rem)/1.05 Montserrat;color:var(--navy);margin:10px 0 12px;letter-spacing:-.01em}
+.goal-main p{margin:0;color:#3B4A5E;max-width:46ch}
+.goal-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.goal-stats div{background:rgba(255,255,255,.7);border-radius:14px;padding:12px 14px}
+.goal-stats b{display:block;font:800 1.25rem Montserrat;color:var(--navy)}
+.goal-stats span{font-size:.82rem;color:#55667D;line-height:1.35;display:block;margin-top:2px}
+.goal-progress{margin-top:22px}
+.gp-bar{height:12px;border-radius:99px;background:rgba(10,27,51,.1);overflow:hidden}
+.gp-bar i{display:block;height:100%;background:var(--green);border-radius:99px}
+.gp-txt{font-size:.9rem;margin-top:8px;color:#3B4A5E}
+.goal-break{padding:36px 40px}
+.goal-break h3{margin:0 0 16px}
+.budget-lines{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.budget-lines li{display:grid;grid-template-columns:1fr auto;grid-template-areas:"t a" "bar bar";gap:6px 12px;font-size:.92rem}
+.bl-t{grid-area:t;color:var(--ink)} .budget-lines b{grid-area:a;color:var(--navy)}
+.bl-bar{grid-area:bar;height:8px;border-radius:99px;background:var(--soft);overflow:hidden}
+.bl-bar i{display:block;height:100%;background:var(--orange);border-radius:99px}
+.muted-sm{font-size:.82rem;color:var(--muted);margin:16px 0 0}
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.tiers.orgs{grid-template-columns:repeat(3,1fr)}
+.tier{position:relative;display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.tier h3{margin:4px 0 0;font-size:1.08rem}
+.tier p{margin:0 0 8px;color:var(--muted);font-size:.93rem;flex:1}
+.tier .ticks{margin:0 0 12px;font-size:.9rem}
+.tier .ticks li{margin:6px 0}
+.tier-amt{font:900 1.7rem Montserrat;color:var(--navy)}
+.tier.any .tier-amt{font-size:1.35rem;padding:5px 0}
+.tier.best{border:2px solid var(--orange);box-shadow:0 18px 44px rgba(255,165,0,.18)}
+.tier-flag{position:absolute;top:-12px;left:22px;background:var(--orange);color:var(--navy);font:800 .72rem Inter;text-transform:uppercase;letter-spacing:.08em;padding:4px 10px;border-radius:99px}
+.tier .btn{width:100%}
+.tier.any .link{align-self:center;margin-top:4px}
+.tier.org{border-top:4px solid var(--blue)}
+.tier-btns{display:grid;gap:8px}
+.pay-note{display:flex;align-items:center;gap:8px;font-size:.86rem;color:var(--muted);margin:16px 0 0}
+.pay-note .icon{width:16px;height:16px;flex:none}
+.thanks-box{display:flex;gap:14px;align-items:center;background:var(--green-l);border:1px solid var(--green);color:var(--ink);border-radius:16px;padding:16px 20px;margin-bottom:24px}
+.thanks-box .icon{width:28px;height:28px;color:var(--green);flex:none}
+@media (max-width:1100px){.tiers{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:900px){.goal{grid-template-columns:1fr}.goal-main,.goal-break{padding:28px 22px}.tiers.orgs{grid-template-columns:1fr}}
+@media (max-width:560px){.tiers{grid-template-columns:1fr}.goal-stats{grid-template-columns:1fr}.tier{padding:22px}}
+.supporters{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:32px}
+.supporters h3{margin:6px 0 0;font-size:1.3rem}
+.supporters .supporter-slot{flex:0 1 320px;min-height:96px}

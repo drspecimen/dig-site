@@ -113,3 +113,4 @@
     boxes.forEach(function (b) { b.hidden = false; });
   }).catch(function () {});
 })();
+
